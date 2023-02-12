@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home-SciBBler</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap' rel='stylesheet'>
+    <link rel="stylesheet" href="./styles/common.css">
+    <script src="scripts/index.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <h1 style="font-family: 'Montez', cursive; 
+                        color: blue;">ScriBBler</h1>
+                    <h6 style="font-family: Ubuntu Mono,serif; font-weight: bold;">Explore, Imagine, Create</h6>
+                </div>
+                <div class="col text-right mt-3" id="header-btn">
+                    <button class="btn btn-primary " data-target="#signupmodal" data-toggle="modal">Sign Up</button>
+                    <button class="btn btn-primary " data-target="#signinmodal" data-toggle="modal">Sign In</button>
+                </div>
+                <div class="modal" id="signupmodal">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="text left text-grey">Get Started</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group ">
+                                        <label class="text-left form-label" for="name">Name</label><br>
+                                        <input type="text" placeholder="Enter your name" id="name" class="form-control"
+                                            required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="text-left">Username</label><br>
+                                        <input type="text" class="form-control" placeholder="Enter your username"
+                                            required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="text-left">Password</label><br>
+                                        <input type="password" class="form-control" placeholder="Enter your password"
+                                            required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="text-left">Confirm password</label><br>
+                                        <input type="password" class="form-control" placeholder="Re-enter your password"
+                                            required>
+                                    </div>
+                                    <div class="modal-footer"></div>
+                                    <button class="btn btn-large btn-block btn-success">Sign Up</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal" id="signinmodal">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="text left text-grey">Welcome Back!</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label class="text-left">Username</label><br>
+                                        <input type="text" class="form-control" placeholder="Enter your username"
+                                            required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="text-left">Password</label><br>
+                                        <input type="password" class="form-control" placeholder="Enter your password"
+                                            required>
+                                    </div>
+                                    <div class="modal-footer"></div>
+                                    <button class="btn btn-large btn-block btn-success">Sign In</button>
+                                    <div class="text-center">Not a member?<button class="btn btn-link"
+                                            data-target="#signupmodal" data-toggle="modal" data-dismiss="modal">Sign
+                                            Up</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="center">
+        <a href="html/postslist.html"><button class="btn btn-warning">All Post</button></a>
+        <button class="btn btn-warning " data-target="#createPostModal" data-toggle="modal">Create Post</button>
+    </div>
+    <div class="modal" id="createPostModal">
+        <div class="modal-dialog  modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="text left text-grey">Pen Your Post</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form class="mb-3">
+                        <div class="form-group">
+                            <label class="text-left">Title</label><br>
+                            <input type="text" class="form-control" placeholder="Enter title of your post" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="text-left">Contents</label><br>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="20"
+                                placeholder="Enter the contents of your post"></textarea>
+                        </div>
+                        <div class="modal-footer"></div>
+                        <div class="text-center"><button class="btn btn-success ">Create</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
